@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Page</title>
+</head>
+<body>
+{% extends 'base.html' %}
+{% block body %}
+<form method="POST" enctype="multipart/form-data" style=" padding-top: 100px;">
+    {% csrf_token %}
+    <input type="text" name="name" placeholder="Enter the movie name"><br><br>
+    <input type="text" name="desc" placeholder="Enter the movie description"><br><br>
+    <input type="text" name="year" placeholder="Enter the movie year"><br><br>
+    <input type="file" name="img" ><br><br>
+    <input type="submit" class="btn btn-danger"><br><br>
+</form>
+{% endblock %}
+</body>
+</html>
