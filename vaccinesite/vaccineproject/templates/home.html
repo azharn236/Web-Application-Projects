@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block metadescription %}
+        Welcome to Vaccine Portal....
+{% endblock %}
+{% block content %}
+    {% if category %}
+    <div>
+        <div class="row my_row_class">
+            <div class="mx_auto">
+                <p><a href="{% url 'vaccine:vaccinePerson' %}">Registered persons</a></p>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+<br>
+<div>
+    <img class="my_image my_image_padding" src="{% static 'img/banner2.png' %}" alt="" width="1295px;" height="650px;">
+</div>
+<br>
+<div>
+    <h1 class="text-center my_title" style="text-align: center;"><b>Vaccine Information</b></h1>
+    <p><a href="{% url 'vaccine:vaccinePerson' %}">Complete Vaccine Information</a></p>
+    <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut pellentesque quam. Nulla semper blandit dolor ac facilisis. Ut non lacus congue, sagittis diam a, sollicitudin quam. Nulla lacinia et augue in eleifend. Sed sollicitudin sapien odio. Donec accumsan dui sit amet accumsan dignissim. </p>
+</div>
+{% endblock %}
